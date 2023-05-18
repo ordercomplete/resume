@@ -1,0 +1,38 @@
+<div>
+  “Education page in progress...”
+  {{#with main}}
+    <main>
+      <section>
+        {{> title data="Education" big=true}}      
+        <ul>
+          {{#each education}}
+            <li>
+          {{name}}
+          {{!-- ↙ тут виводим значення, які більше нуля --}}
+          {{#if point includeZero=true}} ({{point}}) {{/if}}
+
+          {{!-- ↙ тут виводим статус Топ для значеннь з максимальним рейтингом --}}
+          {{#if isTop}} - Top! {{/if}}
+
+          {{!-- ↙ тут виводим статус Топ для значеннь з максимальним рейтингом --}}
+          {{#if isEnd}} - End {{else}} still in process {{/if}}
+        </li>
+          {{/each}}
+        </ul>
+      </section>
+
+      <section>
+        {{> title data="My certificates" big=false}}      
+        <ul>
+          {{#each certificates}}
+            <li>
+              {{name}}
+              <br> 
+              (id {{id}})
+            </li>
+          {{/each}}
+        </ul>
+      </section>
+    </main>
+  {{/with}}
+</div>

@@ -1,0 +1,53 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+  {{#with main}}
+  <main>
+    <section>
+      {{> title data="All skills" big=true}}
+      <ul>
+        {{#each skills}}
+        <li>
+          {{name}}
+          {{!-- ↙ тут виводим значення, які більше нуля --}}
+          {{#if point includeZero=true}} ({{point}}) {{/if}}
+
+          {{!-- ↙ тут виводим статус Топ для значеннь з максимальним рейтингом --}}
+          {{#if isTop}} - Top! {{/if}}
+
+          {{!-- ↙ тут виводим статус для значення (0) що це ще вивчається --}}
+          {{#unless point}} 
+          {{#if point includeZero=true}}          
+          (still studying)
+          {{/if}}
+          {{/unless}}
+
+          {{!-- ↙ тут виводим статус для значення (null) що це НЕ вивчається --}}
+          {{#unless point includeZero=true}} (is not studied) {{/unless}}        
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section>
+      {{> title data="My hobbies" big=false}}      
+      <ol>
+        {{#each hobbies}}
+        <li>
+          {{name}}          
+          {{#if isMain}} - favourite! {{/if}} 
+        </li>
+        {{/each}}
+      </ol>
+    </section>
+  </main>
+  {{/with}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
