@@ -1,69 +1,77 @@
 <div>
-  <h1>WEB</h1>
-  <h2>Programming languages</h2>
-  {{#each web.languages}}
+  <section>
+    <h1>WEB</h1>
+    <h2>Programming languages</h2>
+    {{#each web.languages}}
     <div>
       <h4>{{name}} <em>({{version}})</em></h4>
       <p></p>
       <p>description: {{description}}</p>
 
-      
       {{#each elements}}
       <h5><em>elements:</em></h5>
-        <div>        
-          <p><em>name:</em> {{name}}</p>
-          <p><em>description:</em> {{description}}</p>
-          <p><em>attributes:</em></p> 
-          <dd>
-            {{#each attributes}}
-            <dl>
-            <dt>name:</dt> <dd>{{name}}</dd><br>
-            <dt>description:</dt> <dd>{{description}}</dd>
-            </dl>
-            {{/each}}
-          </dd>  
-        </div>
+      <div>
+        <p><em>name:</em> {{name}}</p>
+        <p><em>description:</em> {{description}}</p>
+        <p><em>attributes:</em></p>
+        <dd>
+          {{#each attributes}}
+          <dl>
+            <dt>name:</dt>
+            <dd>{{name}}</dd><br />
+            <dt>description:</dt>
+            <dd>{{description}}</dd>
+          </dl>
+          {{/each}}
+        </dd>
+      </div>
       {{/each}}
 
-      
       {{#each properties}}
       <h5><em>properties:</em></h5>
-        <div>        
-          <p><em>name:</em> {{name}}</p>
-          <p><em>description:</em> {{description}}</p>
-          <p><em>values:</em></p> 
-          <dd>
-            {{#each values}}
-            <dl>
-            <dt>value:</dt> <dd>{{value}}</dd><br>
-            <dt>description:</dt> <dd>{{description}}</dd>
-            </dl>
-            {{/each}}
-          </dd>  
-        </div>
+      <div>
+        <p><em>name:</em> {{name}}</p>
+        <p><em>description:</em> {{description}}</p>
+        <p><em>values:</em></p>
+        <dd>
+          {{#each values}}
+          <dl>
+            <dt>value:</dt>
+            <dd>{{value}}</dd><br />
+            <dt>description:</dt>
+            <dd>{{description}}</dd>
+          </dl>
+          {{/each}}
+        </dd>
+      </div>
       {{/each}}
 
       {{#each functions}}
       <h5><em>functions:</em></h5>
-        <div>        
-          <p><em>name:</em> {{name}}</p>
-          <p><em>description:</em> {{description}}</p>
-          <p><em>parameters:</em></p> 
-          <dd>
-            {{#each parameters}}
-            <dl>
-            <dt>name:</dt> <dd>{{name}}</dd><br>
-            <dt>type:</dt> <dd>{{type}}</dd><br>
-            <dt>description:</dt> <dd>{{description}}</dd>
-            </dl>
-            {{/each}}
-          </dd>  
-        </div>
+      <div>
+        <p><em>name:</em> {{name}}</p>
+        <p><em>description:</em> {{description}}</p>
+        <p><em>parameters:</em></p>
+        <dd>
+          {{#each parameters}}
+          <dl>
+            <dt>name:</dt>
+            <dd>{{name}}</dd><br />
+            <dt>type:</dt>
+            <dd>{{type}}</dd><br />
+            <dt>description:</dt>
+            <dd>{{description}}</dd>
+          </dl>
+          {{/each}}
+        </dd>
+      </div>
       {{/each}}
     </div>
 
-    <br>
-    <hr>
-    <br>
+    <br />
+    <hr />
+    <br />
 
-  {{/each}}
+    {{/each}}
+  </section>
+</div>

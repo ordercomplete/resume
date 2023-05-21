@@ -4,151 +4,148 @@
 }}
 
 <div>
-    {{#with main.person}}
-    <main>
-        <section>
-            <div>
-                <h3>{{name}}</h3>
-            </div>
-            <br>
-            <div>
-                <b>Age</b> - {{age}}, <b>gender</b> - {{gender}}
-            </div>
-            <br>
-            {{#with address}}
-            <div>
-                <em>Address:</em> {{street}}; {{city}}; {{state}}; {{zip}}; {{country}}
-            </div>
-            {{/with}}
-            <br>
-            {{#each education}}
-            <h4>Education</h4>
-            <div>
-                <em>degree:</em> {{degree}}<br>
-                <em>major:</em> {{major}}<br>
-                <em>university:</em> {{university}}<br>
-                <em>graduation year:</em> {{graduationYear}}<br>
-            </div>
-            {{/each }}
-            {{#each workExperience}}
-            <h4>Work experience</h4>
-            <div>
-                <dl>
-                    <dt><em>company:</em></dt>
-                    <dd>{{company}}</dd><br>
-                    <dt><em>title:</em></dt>
-                    <dd>{{title}}</dd><br>
-                    <dt><em>start date:</em></dt>
-                    <dd>{{startDate}}</dd><br>
-                    <dt><em>end date:</em></dt>
-                    <dd>{{endDate}}</dd><br>
-                    <dt><em>responsibilities:</em></dt><br>
-                    <dd>{{responsibilities}}</dd><br>
-                    <dt><em>year founded:</em></dt>
-                    <dd>{{year_founded}}</dd><br>
-                    <dt><em>industry:</em></dt>
-                    <dd>{{industry}}</dd><br>
-                    <dt><em><b>employees:</b></em></dt>
+  {{#with person}}
+  <section>
+    <div>
+      <h3>{{name}}</h3>
+    </div>
+    <br>
+    <div>
+      <b>Age</b> - {{age}}, <b>gender</b> - {{gender}}
+    </div>
+    <br>
+    {{#with address}}
+    <div>
+      <em>Address:</em> {{street}}; {{city}}; {{state}}; {{zip}}; {{country}}
+    </div>
+    {{/with}}
+    <br>
+    {{#each education}}
+    <h4>Education</h4>
+    <div>
+      <em>degree:</em> {{degree}}<br>
+      <em>major:</em> {{major}}<br>
+      <em>university:</em> {{university}}<br>
+      <em>graduation year:</em> {{graduationYear}}<br>
+    </div>
+    {{/each }}
+    {{#each workExperience}}
+    <h4>Work experience</h4>
+    <div>
+      <dl>
+        <dt><em>company:</em></dt>
+        <dd>{{company}}</dd><br>
+        <dt><em>title:</em></dt>
+        <dd>{{title}}</dd><br>
+        <dt><em>start date:</em></dt>
+        <dd>{{startDate}}</dd><br>
+        <dt><em>end date:</em></dt>
+        <dd>{{endDate}}</dd><br>
+        <dt><em>responsibilities:</em></dt><br>
+        <dd>{{responsibilities}}</dd><br>
+        <dt><em>year founded:</em></dt>
+        <dd>{{year_founded}}</dd><br>
+        <dt><em>industry:</em></dt>
+        <dd>{{industry}}</dd><br>
+        <dt><em><b>employees:</b></em></dt>
+        <dd>
+          {{#each employees}}
+          <dl>
+            <dt><em>name:</em></dt>
+            <dd>{{name}}</dd><br>
+            <dt><em>position:</em></dt>
+            <dd>{{position}}</dd><br>
+            <dt><em>department:</em></dt>
+            <dd>{{department}}</dd><br>
+            <dt><em><b>projects:</b></em></dt>
+            <dd>
+              {{#each projects}}
+              <dl>
+                <dt><em>name:</em></dt>
+                <dd>{{name}}</dd><br>
+                <dt><em>description:</em></dt>
+                <dd>{{description}}</dd><br>
+                <dt><em>status:</em></dt>
+                <dd>{{status}}</dd><br>
+                <dt><em><b>teams:</b></em></dt>
+                <dd>
+                  {{#each teams}}
+                  <dl>
+                    <dt><em>team name:</em></dt>
+                    <dd>{{team_name}}</dd><br>
+                    <dt><em><b>team leader:</b></em></dt>
                     <dd>
-                        {{#each employees}}
-                        <dl>
+                      {{#with team_leader}}
+                      <dl>
+                        <dt><em>name:</em></dt>
+                        <dd>{{name}}</dd><br>
+                        <dt><em>title:</em></dt>
+                        <dd>{{title}}</dd><br>
+                        <dt><em>email:</em></dt>
+                        <dd>{{email}}</dd><br>
+                      </dl>
+                      {{/with}}
+                    </dd>
+                    <dt><em><b>team members:</b></em></dt>
+                    <dd>
+                      {{#each team_members}}
+                      <dl>
+                        <dt><em>name:</em></dt>
+                        <dd>{{name}}</dd><br>
+                        <dt><em>title:</em></dt>
+                        <dd>{{title}}</dd><br>
+                        <dt><em>email:</em></dt>
+                        <dd>{{email}}</dd><br>
+                        <dt><em>skills:</em></dt>
+                        <dd>{{#each skills}} <li>{{this}}</li> {{/each}}</dd><br>
+                        <dt><em><b>projects:</b></em></dt>
+                        <dd>
+                          {{#each projects}}
+                          <dl>
                             <dt><em>name:</em></dt>
                             <dd>{{name}}</dd><br>
-                            <dt><em>position:</em></dt>
-                            <dd>{{position}}</dd><br>
-                            <dt><em>department:</em></dt>
-                            <dd>{{department}}</dd><br>
-                            <dt><em><b>projects:</b></em></dt>
+                            <dt><em>description:</em></dt>
+                            <dd>{{description}}</dd><br>
+                            <dt><em>technologies:</em></dt>
                             <dd>
-                                {{#each projects}}
-                                <dl>
-                                    <dt><em>name:</em></dt>
-                                    <dd>{{name}}</dd><br>
-                                    <dt><em>description:</em></dt>
-                                    <dd>{{description}}</dd><br>
-                                    <dt><em>status:</em></dt>
-                                    <dd>{{status}}</dd><br>
-                                    <dt><em><b>teams:</b></em></dt>
-                                    <dd>
-                                        {{#each teams}}
-                                        <dl>
-                                            <dt><em>team name:</em></dt>
-                                            <dd>{{team_name}}</dd><br>
-                                            <dt><em><b>team leader:</b></em></dt>
-                                            <dd>
-                                                {{#with team_leader}}
-                                                <dl>
-                                                    <dt><em>name:</em></dt>
-                                                    <dd>{{name}}</dd><br>
-                                                    <dt><em>title:</em></dt>
-                                                    <dd>{{title}}</dd><br>
-                                                    <dt><em>email:</em></dt>
-                                                    <dd>{{email}}</dd><br>
-                                                </dl>
-                                                {{/with}}
-                                            </dd>
-                                            <dt><em><b>team members:</b></em></dt>
-                                            <dd>
-                                                {{#each team_members}}
-                                                <dl>
-                                                    <dt><em>name:</em></dt>
-                                                    <dd>{{name}}</dd><br>
-                                                    <dt><em>title:</em></dt>
-                                                    <dd>{{title}}</dd><br>
-                                                    <dt><em>email:</em></dt>
-                                                    <dd>{{email}}</dd><br>
-                                                    <dt><em>skills:</em></dt>
-                                                    <dd>{{#each skills}} <li>{{this}}</li> {{/each}}</dd><br>
-                                                    <dt><em><b>projects:</b></em></dt>
-                                                    <dd>
-                                                        {{#each projects}}
-                                                        <dl>
-                                                            <dt><em>name:</em></dt>
-                                                            <dd>{{name}}</dd><br>
-                                                            <dt><em>description:</em></dt>
-                                                            <dd>{{description}}</dd><br>
-                                                            <dt><em>technologies:</em></dt>
-                                                            <dd>
-                                                                {{#each technologies}}
-                                                                <li>{{this}}</li>
-                                                                {{/each}}
-                                                            </dd><br>
-                                                            <dt><em><b>team members:</b></em></dt>
-                                                            <dd>
-                                                                {{#each team_members}}
-                                                                <dl>
-                                                                    <dt><em>name:</em></dt>
-                                                                    <dd>{{name}}</dd>
-                                                                </dl>
-                                                                <dl>
-                                                                    <dt><em>title:</em></dt>
-                                                                    <dd>{{title}}</dd>
-                                                                </dl>
-                                                                {{/each}}
-                                                            </dd>
-                                                        </dl>
-                                                        {{/each}}
-                                                    </dd>
-                                                </dl>
-                                                {{/each}}
-                                            </dd>
-                                        </dl>
-                                        {{/each}}
-                                    </dd>
-                                </dl>
-                                {{/each}}
+                              {{#each technologies}}
+                              <li>{{this}}</li>
+                              {{/each}}
+                            </dd><br>
+                            <dt><em><b>team members:</b></em></dt>
+                            <dd>
+                              {{#each team_members}}
+                              <dl>
+                                <dt><em>name:</em></dt>
+                                <dd>{{name}}</dd>
+                              </dl>
+                              <dl>
+                                <dt><em>title:</em></dt>
+                                <dd>{{title}}</dd>
+                              </dl>
+                              {{/each}}
                             </dd>
-                        </dl>
-                        {{/each}}
+                          </dl>
+                          {{/each}}
+                        </dd>
+                      </dl>
+                      {{/each}}
                     </dd>
-                </dl>
-            </div>
-            {{/each}}
-        </section>
-    </main>
-    {{/with}}
+                  </dl>
+                  {{/each}}
+                </dd>
+              </dl>
+              {{/each}}
+            </dd>
+          </dl>
+          {{/each}}
+        </dd>
+      </dl>
+    </div>
+    {{/each}}
+  </section>
+  {{/with}}
 </div>
-
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
 Адже наш layout/default.hbs має вже структуру HTML
