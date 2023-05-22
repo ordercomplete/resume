@@ -1,0 +1,130 @@
+<div>
+  <h1>{{name}}</h1>
+  <h2>{{description}}</h2>
+  <h3>price: {{price}} 👀</h3>
+  <h4>category - {{category}}</h4>
+  <section>
+    <h4>Features</h4>
+    {{#with features}}
+    <section>
+      <h5>Processor</h5>
+      {{#with processor}}
+      <section>
+        <p>brand: {{brand}}</p>
+        <p>model: {{model}}</p>
+        <p>speed: {{speed}}</p>
+        <p>cores: {{cores}}</p>
+        <p>cache: {{cache}}</p>
+      </section>
+      {{/with}}
+
+      <h5>Memory</h5>
+      {{#with memory}}
+      <section>
+        <p>type: {{type}}</p>
+        <p>size: {{size}}</p>
+        <p>speed: {{speed}}</p>
+
+      </section>
+      {{/with}}
+
+      <h5>Storage</h5>
+      {{#with storage}}
+      <section>
+        <p>type: {{type}}</p>
+        <p>size: {{size}}</p>
+
+      </section>
+      {{/with}}
+
+      <h5>Display</h5>
+      {{#with display}}
+      <section>
+        <p>size: {{size}}</p>
+        <p>resolution: {{resolution}}</p>
+        <p>technology: {{technology}}</p>
+        <p>color space: {{color_space}}</p>
+        <p>brightness: {{brightness}}</p>
+        <p>refresh rate: {{refresh_rate}}</p>
+      </section>
+      {{/with}}
+
+      <h5>Graphics</h5>
+      {{#with graphics}}
+      <section>
+        <p>brand: {{brand}}</p>
+        <p>model: {{model}}</p>
+        <p>speed: {{speed}}</p>
+
+      </section>
+      {{/with}}
+
+      <h5>ports</h5>
+      {{#each ports}}
+      <section>
+        <p>type: {{type}}</p>
+        <p>count: {{count}}</p>
+        {{#if features}}
+        <p>features:</p>
+        {{#each features}}
+        <ul>
+          <li>{{this}}</li>
+        </ul>
+        {{/each}}
+        {{/if}}
+
+
+      </section>
+      {{/each}}
+
+      <h5>Battery</h5>
+      <section>
+        {{#with battery}}
+        <p>type: {{type}}</p>
+        <p>capacity: {{capacity}}</p>
+        <p>life: {{life}}</p>
+        {{/with}}
+      </section>
+
+      <h5>Weight:</h5>
+      <section>
+        <p>{{weight}}</p>
+      </section>
+
+      <h5>Dimensions:</h5>
+      <section>
+        {{#with dimensions}}
+        <p>height: {{height}}</p>
+        <p>width: {{width}}</p>
+        <p>depth: {{depth}}</p>
+        {{/with}}
+      </section>
+
+      <h5>Operating system:</h5>
+      <section>
+        <p>{{operating_system}}</p>
+      </section>
+
+      <h5>accessories</h5>
+      <section>
+        {{#each accessories}}
+        <section>
+          <p>name: {{name}}</p>
+          <p>price: {{price}}</p>
+          <hr>
+        </section>
+        {{/each}}
+      </section>
+
+
+
+    </section>
+
+
+    {{/with}}
+
+
+
+
+  </section>
+</div>
