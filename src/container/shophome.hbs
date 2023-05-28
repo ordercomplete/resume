@@ -1,0 +1,171 @@
+<div>
+
+  {{#with navigation}}
+  <div class="row">
+    <div class="col-12">
+
+      <div class="nav">
+        {{#each links}}
+        <div class="nav-item">
+          <a href="{{href}}" class="nav-link">{{text}}</a>
+        </div>
+        {{/each}}
+        <div class="nav-item">
+          <a href="#" class="nav-link disabled">Disable</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  {{/with}}
+
+  <br>
+  <hr>
+  <br>
+
+  {{#with newsBlock}}
+  <div class="row gx-2 gy-3">
+    <p class="display-3 text-center">{{title}}</p>
+    {{#each cards}}
+    <div class="col-3">
+      <div class="card text-bg-dark">
+        <h6 class="card-header">{{title}}
+          {{#if isNew}}
+          <span class="badge text-bg-success rounded-pill">Нова</span>
+          {{/if}}
+          {{#if isTop}}
+          <span class="badge text-bg-danger rounded-pill">Топ</span>
+          {{/if}}
+        </h6>
+        <div class="card-body">
+          <p>{{description}}</p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/with}}
+
+  <br>
+  <hr>
+  <br>
+
+  {{#with goodsBlock}}
+  <div class="row">
+    <div class="col-12">
+      <div class="nav nav-tabs">
+        {{#each tabs}}
+        <div class="nav-item">
+          <a href="#" class="nav-link {{#if isActive}} active {{/if}} {{#if isDisabled}} disabled {{/if}}">{{text}}</a>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="row gx-2 gy-4">
+      <h2>{{title}}</h2>
+      {{#each cards}}
+      <div class="col-4">
+        <div class="card">
+          <img class="card-img-top" src="{{image}}" alt="{{title}}">
+          <div class="card-body">
+            <h6 class="card-title">{{title}}
+              {{#if isHot}}
+              <span class="badge text-bg-warning rounded-pill">HOT!</span>
+              {{/if}}
+              {{#if isNew}}
+              <span class="badge text-bg-primary rounded-pill">Нове</span>
+              {{/if}}
+            </h6>
+            <p>{{description}}</p>
+
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+  {{/with}}
+
+  <br>
+  <hr>
+  <br>
+
+  {{#with subscribe}}
+  <div class="card">
+    <div class="card-body text-bg-dark p-1">
+      <h2 class="m-1 mb-2">{{header}}</h2>
+      <p class="m-1">{{description}}</p>
+      {{#each buttons}}
+      <a href="{{link}}" class="btn btn-primary btn-sm m-1">{{text}}</a><br>
+      {{/each}}
+    </div>
+  </div>
+  {{/with}}
+
+  <br>
+  <hr>
+  <br>
+
+  {{#with service}}
+  <div class="card">
+    <div class="card-body text-bg-success p-1 text-center">
+      <h2 class="m-1 mb-2">{{title}}</h2>
+      <p class="m-1 mb-2">{{description}}</p>
+      {{#each buttons}}
+      <a href="{{link}}" class="btn btn-primary btn-sm m-1">{{text}}</a>
+      {{/each}}
+    </div>
+  </div>
+  {{/with}}
+
+  <br>
+  <hr>
+  <br>
+
+  <div class="row g-5">
+    {{#each footer}}
+    <div class="nav col-2">
+      <div>
+        {{#each this}}
+        <div>
+          <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">{{this.text}}</a>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
