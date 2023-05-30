@@ -29,17 +29,17 @@
         {{#with contacts_data}}
 
         <div class="col-12">
-          <div class="row gx-2 gy-3">
-            <h4>{{title}}</h4>
-            {{#each buttons}}
-            {{!-- необхідно зменшити відстань між кнопками --}}
-            <div class="col-6 text-center">
-              <a href="#" class="btn {{#if isPrimary}} btn-warning{{else}} btn-outline-warning{{/if}} 
-          ">{{text}}</a>
-            </div>
-            {{/each}}
-
-          </div>
+          <h4>{{title}}</h4>
+          <table class="row">
+            <tr>
+              {{#each buttons}}
+              <td>
+                <a href="#"
+                  class="btn me-2{{#if isPrimary}} btn-warning{{/if}} {{#if isOutline}}btn-outline-warning{{/if}}">{{text}}</a>
+              </td>
+              {{/each}}
+            </tr>
+          </table>
         </div>
 
         <div class="col-12">
@@ -408,22 +408,27 @@
     <hr>
   </div>
 
-  {{!-- <div class="col-12"> --}}
-    <div class="row g-5 ms-5">
-      {{#each footer}}
-      <div class="nav col-2">
-        <div>
-          {{#each this}}
-          <div class="">
-            <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">{{this.text}}</a>
-          </div>
-          {{/each}}
-        </div>
-      </div>
-      {{/each}}
-    </div>
-    {{!--
-  </div> --}}
+
+  <div class="row g-5 ms-0">
+    <table>
+      <tr>
+        {{#each footer}}
+        <td>
+          <button class="btn m-0 p-0">
+            <div>
+              {{#each this}}
+              <div class="nav">
+                <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">{{this.text}}</a>
+              </div>
+              {{/each}}
+            </div>
+          </button>
+        </td>
+        {{/each}}
+      </tr>
+    </table>
+  </div>
+
 
 
 
