@@ -385,15 +385,13 @@
       {{#with factors}}
       <div class="mt-4 mb-2">{{title}}</div>
       <div class="form-check">
-        <div>
-          {{#each options}}
-          <div class="mb-3">
-            <input name="factors" type="checkbox" class="form-check-input" {{#if @first}} checked {{else}} default
-              {{/if}}>
-            <label class="form-check-label">{{this}}</label>
-          </div>
-          {{/each}}
+        {{#each options}}
+        <div class="mb-3">
+          <input name="factors" type="checkbox" class="form-check-input" {{#if @first}} checked {{else}} default
+            {{/if}}>
+          <label class="form-check-label">{{this}}</label>
         </div>
+        {{/each}}
       </div>
       {{/with}}
 

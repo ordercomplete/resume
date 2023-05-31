@@ -1,0 +1,36 @@
+{{#with service}}
+<div class="card text-bg-success">
+  <div class="card-body text-center">
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+    {{#each buttons}}
+    <button class="btn btn-primary" href="{{link}}">{{text}}</button>
+    {{/each}}
+  </div>
+
+</div>
+{{/with}}
+
+<div class="my-5">
+  <hr>
+</div>
+
+<div class="row g-5 ms-0">
+  <table>
+    <tr>
+      {{#each footer}}
+      <td>
+        <button class="btn m-0 p-0">
+          <div>
+            {{#each this}}
+            <div class="nav">
+              <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">{{this.text}}</a>
+            </div>
+            {{/each}}
+          </div>
+        </button>
+      </td>
+      {{/each}}
+    </tr>
+  </table>
+</div>
