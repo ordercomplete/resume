@@ -1,16 +1,28 @@
 <div>
-  <section>
-    <h1>{{program.excursion.name}}</h1>
-    <h2>{{program.excursion.location.city}},
-      {{program.excursion.location.country}}</h2>
 
-    <h3>Program:</h3>
-    {{#each program.excursion.program}}
-    <div>
-      <h4>{{name}} <em>({{type}})</em></h4>
+  <div class="card text-center">
+    <div class="card-header">
+      <h1>{{program.excursion.name}}</h1>
+    </div>
+    <div class="card-body">
+      <h2>{{program.excursion.location.city}},
+        {{program.excursion.location.country}}</h2>
+    </div>
+    <div class="card-footer">
+      <h3>Program:</h3>
+    </div>
+  </div>
+
+  {{#each program.excursion.program}}
+  <div class="card my-3">
+
+    <div class="card-header text-center">
+      <h4 class="mt-3">{{name}} <em>({{type}})</em></h4>
       <p></p>
       <p>Duration: {{duration}} hours</p>
+    </div>
 
+    <div class="card-body">
       <h5><em>Details:</em></h5>
       {{#with details}}
       {{#with museum}}
@@ -22,6 +34,7 @@
           {{location.city}},
           {{location.country}}</p>
       </div>
+
 
       <h5>Exhibits</h5>
       {{#each exhibits}}
@@ -39,7 +52,7 @@
         <p><em>audio guide:</em> not available</p>
         {{/if}}
       </div>
-      <br>
+
       {{/each}}
       {{/with}}
 
@@ -60,16 +73,31 @@
       {{/with}}
 
 
+
+
+    </div>
+
+    <div class="card-footer text-end">
       {{#with guide}}
       <h5>Guide</h5>
       <p><em>name:</em> {{name}}</p>
       <p><em>language:</em> {{language}}</p>
       <p><em>rating:</em> {{rating}}</p>
       {{/with}}
-      {{/with}}
-      <br>
-      <hr />
     </div>
-    {{/each}}
-  </section>
+
+
+    {{/with}}
+
+  </div>
+
+  {{/each}}
+
+
+
+
+
+
+
+
 </div>

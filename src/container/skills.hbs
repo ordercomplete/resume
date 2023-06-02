@@ -2,47 +2,74 @@
 Це код container файлу для summary сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 }}
+<div class="card"
+  style="background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );">
 
-<div>
-  {{#with main}}
-  <section>
-    {{> title data="All skills" big=true}}
-    <ul>
-      {{#each skills}}
-      <li>
-        {{name}}
-        {{!-- ↙ тут виводим значення, які більше нуля --}}
-        {{#if point includeZero=true}} ({{point}}) {{/if}}
+  <div class="card-header">
+    <div class="card my-2">
+      <div class="card-body"
+        style="background-image: radial-gradient( circle 993px at 0.5% 50.5%,  rgba(137,171,245,0.37) 0%, rgba(245,247,252,1) 100.2% );">
+        {{>header-bio}}
+      </div>
+    </div>
 
-        {{!-- ↙ тут виводим статус Топ для значеннь з максимальним рейтингом --}}
-        {{#if isTop}} - Top! {{/if}}
 
-        {{!-- ↙ тут виводим статус для значення (0) що це ще вивчається --}}
-        {{#unless point}}
-        {{#if point includeZero=true}}
-        (still studying)
-        {{/if}}
-        {{/unless}}
 
-        {{!-- ↙ тут виводим статус для значення (null) що це НЕ вивчається --}}
-        {{#unless point includeZero=true}} (is not studied) {{/unless}}
-      </li>
-      {{/each}}
-    </ul>
-  </section>
 
-  <section>
-    {{> title data="My hobbies" big=false}}
-    <ol>
-      {{#each hobbies}}
-      <li>
-        {{name}}
-        {{#if isMain}} - favourite! {{/if}}
-      </li>
-      {{/each}}
-    </ol>
-  </section>
-  {{/with}}
+  </div>
+
+
+
+  <div class="card-body">
+    {{#with main}}
+    <div class="card">
+      <div class="card-body">
+
+        {{> title data="All skills" big=true}}
+        <ul>
+          {{#each skills}}
+          <li>
+            {{name}}
+            {{!-- ↙ тут виводим значення, які більше нуля --}}
+            {{#if point includeZero=true}} ({{point}}) {{/if}}
+
+            {{!-- ↙ тут виводим статус Топ для значеннь з максимальним рейтингом --}}
+            {{#if isTop}} - Top! {{/if}}
+
+            {{!-- ↙ тут виводим статус для значення (0) що це ще вивчається --}}
+            {{#unless point}}
+            {{#if point includeZero=true}}
+            (still studying)
+            {{/if}}
+            {{/unless}}
+
+            {{!-- ↙ тут виводим статус для значення (null) що це НЕ вивчається --}}
+            {{#unless point includeZero=true}} (is not studied) {{/unless}}
+          </li>
+          {{/each}}
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body text-end">
+
+        {{> title data="My hobbies" big=false}}
+        <ol>
+          {{#each hobbies}}
+          <li>
+            {{name}}
+            {{#if isMain}} - favourite! {{/if}}
+          </li>
+          {{/each}}
+        </ol>
+
+      </div>
+    </div>
+
+    {{/with}}
+  </div>
 </div>
 
 {{!--

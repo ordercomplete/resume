@@ -16,11 +16,11 @@
 </div>
 {{/with}}
 
-<nav class="breadcrumb my-5">
+<nav class="breadcrumb mt-5 mb-3">
   {{#each breadcrumb}}
   <ul>
-    <li class="breadcrumb-item">
-      <a href="{{url}}">{{name}}</a>
+    <li class="breadcrumb-item ">
+      <a href="{{url}}" class="btn btn-link p-0{{#unless url}} disabled {{/unless}}">{{name}}</a>
     </li>
   </ul>
   {{/each}}

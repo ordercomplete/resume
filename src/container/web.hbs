@@ -1,76 +1,87 @@
 <div>
   <section>
-    <h1>WEB</h1>
-    <h2>Programming languages</h2>
+    <div class="card mb-3"
+      style="background-image: linear-gradient( 87.9deg,  rgba(140,253,242,1) 9.7%, rgba(81,162,228,1) 45.5%, rgba(154,16,154,1) 92.5% );">
+      <div class="card-body">
+        <h1>WEB</h1>
+        <h2>Programming languages</h2>
+      </div>
+
+    </div>
+
+
     {{#each web.languages}}
     <div>
-      <h4>{{name}} <em>({{version}})</em></h4>
+      <button class="btn btn-outline-warning">
+        <h4>{{name}} <code>({{version}})</code></h4>
+      </button>
       <p></p>
-      <p>description: {{description}}</p>
+      <p class="alert alert-primary"><code>description: </code>{{description}}</p>
 
       {{#each elements}}
-      <h5><em>elements:</em></h5>
+      <h5 class="btn btn-outline-success rounded-pill">elements:</h5>
       <div>
-        <p><em>name:</em> {{name}}</p>
-        <p><em>description:</em> {{description}}</p>
-        <p><em>attributes:</em></p>
-        <dd>
-          {{#each attributes}}
-          <dl>
-            <dt>name:</dt>
-            <dd>{{name}}</dd><br />
-            <dt>description:</dt>
-            <dd>{{description}}</dd>
-          </dl>
-          {{/each}}
-        </dd>
+        <p><code>name:</code> {{name}}</p>
+        <p><code>description:</code> {{description}}</p>
+        <p><code>attributes:</code></p>
+        {{#each attributes}}
+        <section>
+          <ul>
+            <li>name:
+              {{name}}</li>
+            <li>description:
+              {{description}}</li>
+          </ul>
+        </section>
+        {{/each}}
       </div>
       {{/each}}
 
       {{#each properties}}
-      <h5><em>properties:</em></h5>
+      <h5 class="btn btn-outline-success rounded-pill">properties:</h5>
       <div>
-        <p><em>name:</em> {{name}}</p>
-        <p><em>description:</em> {{description}}</p>
-        <p><em>values:</em></p>
-        <dd>
-          {{#each values}}
-          <dl>
-            <dt>value:</dt>
-            <dd>{{value}}</dd><br />
-            <dt>description:</dt>
-            <dd>{{description}}</dd>
-          </dl>
-          {{/each}}
-        </dd>
+        <p><code>name:</code> {{name}}</p>
+        <p><code>description:</code> {{description}}</p>
+        <p><code>values:</code></p>
+
+        {{#each values}}
+        <section>
+          <ul>
+            <li>value:
+              {{value}}</li>
+            <li>description:
+              {{description}}</li>
+          </ul>
+        </section>
+        {{/each}}
+
       </div>
       {{/each}}
 
       {{#each functions}}
-      <h5><em>functions:</em></h5>
+      <h5 class="btn btn-outline-success rounded-pill">functions:</h5>
       <div>
-        <p><em>name:</em> {{name}}</p>
-        <p><em>description:</em> {{description}}</p>
-        <p><em>parameters:</em></p>
-        <dd>
-          {{#each parameters}}
-          <dl>
-            <dt>name:</dt>
-            <dd>{{name}}</dd><br />
-            <dt>type:</dt>
-            <dd>{{type}}</dd><br />
-            <dt>description:</dt>
-            <dd>{{description}}</dd>
-          </dl>
-          {{/each}}
-        </dd>
+        <p><code>name:</code> {{name}}</p>
+        <p><code>description:</code> {{description}}</p>
+        <p><code>parameters:</code></p>
+        {{#each parameters}}
+        <section>
+          <ul>
+            <li>name:
+              {{name}}</li>
+            <li>type:
+              {{type}}</li>
+            <li>description:
+              {{description}}</li>
+          </ul>
+        </section>
+        {{/each}}
+
       </div>
       {{/each}}
     </div>
 
-    <br />
-    <hr />
-    <br />
+
 
     {{/each}}
   </section>
