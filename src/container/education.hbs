@@ -1,38 +1,77 @@
-<div>
-  “Education page in progress...”
-  {{#with main}}
+{{!
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+<div class="card"
+  style="background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );">
 
-  <section>
-    {{> title data="Education" big=true}}
-    <ul>
-      {{#each education}}
-      <li>
-        {{name}}
-        {{!-- ↙ тут виводим значення, які більше нуля --}}
-        {{#if point includeZero=true}} ({{point}}) {{/if}}
+  <div class="card-header">
 
-        {{!-- ↙ тут виводим статус Топ для значеннь з максимальним рейтингом --}}
-        {{#if isTop}} - Top! {{/if}}
+    <div class="card my-2">
+      <div class="card-body"
+        style="background-image: radial-gradient( circle 993px at 0.5% 50.5%,  rgba(137,171,245,0.37) 0%, rgba(245,247,252,1) 100.2% );">
 
-        {{!-- ↙ тут виводим статус Топ для значеннь з максимальним рейтингом --}}
-        {{#if isEnd}} - End {{else}} still in process {{/if}}
-      </li>
-      {{/each}}
-    </ul>
-  </section>
+        {{>header-bio}}
 
-  <section>
-    {{> title data="My certificates" big=false}}
-    <ul>
-      {{#each certificates}}
-      <li>
-        {{name}}
-        <br>
-        (id {{id}})
-      </li>
-      {{/each}}
-    </ul>
-  </section>
+      </div>
+    </div>
+  </div>
 
-  {{/with}}
+
+
+  <div class="card-body">
+
+    {{#with main}}
+    <div class="card">
+      <div class="card-body">
+
+        <button class="btn btn-outline-info">{{> title data="Education" big=true}}</button>
+        <div>
+          {{#each education}}
+          <section class="my-1">
+            {{name}}
+            {{!-- ↙ тут виводим значення, які більше нуля --}}
+            {{#if point includeZero=true}} ({{point}}) {{/if}}
+
+            {{!-- ↙ тут виводим статус Топ для значеннь з максимальним рейтингом --}}
+            <span class="badge text-bg-danger rounded-pill">{{#if isTop}} Top! {{/if}}</span>
+
+            {{!-- ↙ тут виводим статус Топ для значеннь з максимальним рейтингом --}}
+            <span class="badge text-bg-success rounded-pill">{{#if isEnd}} End {{/if}}</span>
+            <span class="badge text-bg-primary rounded-pill">{{#unless isEnd}} still in process
+              {{/unless}}</span>
+          </section>
+
+          {{/each}}
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body text-end">
+
+        <button class="btn btn-outline-info">{{> title data="My certificates" big=false}}</button>
+        <ul>
+          {{#each certificates}}
+          <li class="my-3">
+            {{name}}
+
+            <span class="badge text-bg-light rounded-pill">id: {{id}}</span>
+          </li>
+          {{/each}}
+        </ul>
+
+      </div>
+    </div>
+
+    {{/with}}
+    <p class="mt-3 mb-2 text-center">“Education page in progress...”</p>
+  </div>
 </div>
+
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}

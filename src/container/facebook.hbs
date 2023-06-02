@@ -1,54 +1,82 @@
-<div>
-  <h1>{{name}}</h1>
-  <h2>Users</h2>
-  {{#each users}}
-  <section>
+<div class="card">
+  <div class="card-body">
+    <section class="alert alert-dark">
+      <h1>{{name}}</h1>
+      <h2>Users</h2>
+    </section>
+    {{#each users}}
+    <section class="alert alert-primary">
 
 
-    <p><em>id:</em> {{id}}</p>
-    <p><em>name:</em> <b>{{name}}</b></p>
-    <p><em>gender:</em> {{gender}}</p>
-    <p><em>age:</em> {{age}}</p>
-    <p><b>friends:</b></p>
-
-    {{#each friends}}
-    <section>
       <p><em>id:</em> {{id}}</p>
       <p><em>name:</em> <b>{{name}}</b></p>
       <p><em>gender:</em> {{gender}}</p>
       <p><em>age:</em> {{age}}</p>
-      <p><b>mutual friends:</b></p>
+      <p><b>friends:</b></p>
 
-      {{#each mutual_friends}}
-      <section>
+      {{#each friends}}
+      <section class="alert alert-warning col-8">
         <p><em>id:</em> {{id}}</p>
         <p><em>name:</em> <b>{{name}}</b></p>
         <p><em>gender:</em> {{gender}}</p>
         <p><em>age:</em> {{age}}</p>
-        {{#if mutual_friends}}
-        <p><b>mutual_friends:</b></p>
+        <p><b>mutual friends:</b></p>
+
         {{#each mutual_friends}}
-        <section>
+        <section class="alert alert-danger col-8">
           <p><em>id:</em> {{id}}</p>
           <p><em>name:</em> <b>{{name}}</b></p>
           <p><em>gender:</em> {{gender}}</p>
           <p><em>age:</em> {{age}}</p>
+          {{#if mutual_friends}}
+          <p><b>mutual_friends:</b></p>
+          {{#each mutual_friends}}
+          <section class="alert alert-primary">
+            <p><em>id:</em> {{id}}</p>
+            <p><em>name:</em> <b>{{name}}</b></p>
+            <p><em>gender:</em> {{gender}}</p>
+            <p><em>age:</em> {{age}}</p>
+          </section>
+          {{/each}}
+          {{/if}}
+        </section>
+        {{/each}}
+
+        {{#if groups}}
+        <p><b>groups:</b></p>
+        {{#each groups}}
+        <section class="alert alert-info col-8">
+          <p><em>id:</em> {{id}}</p>
+          <p><em>name:</em> <b>{{name}}</b></p>
+          <p><em>description:</em> {{description}}</p>
+          <p><b>members:</b></p>
+          {{#each members}}
+          <section class="alert alert-danger col-8">
+            <p><em>id:</em> {{id}}</p>
+            <p><em>name:</em> <b>{{name}}</b></p>
+            <p><em>gender:</em> {{gender}}</p>
+            <p><em>age:</em> {{age}}</p>
+          </section>
+          {{/each}}
         </section>
         {{/each}}
         {{/if}}
+
+
+
       </section>
       {{/each}}
 
       {{#if groups}}
       <p><b>groups:</b></p>
       {{#each groups}}
-      <section>
+      <section class="alert alert-danger col-8">
         <p><em>id:</em> {{id}}</p>
         <p><em>name:</em> <b>{{name}}</b></p>
         <p><em>description:</em> {{description}}</p>
         <p><b>members:</b></p>
         {{#each members}}
-        <section>
+        <section class="alert alert-success col-8">
           <p><em>id:</em> {{id}}</p>
           <p><em>name:</em> <b>{{name}}</b></p>
           <p><em>gender:</em> {{gender}}</p>
@@ -61,34 +89,10 @@
 
 
 
+
+
+
     </section>
     {{/each}}
-
-    {{#if groups}}
-    <p><b>groups:</b></p>
-    {{#each groups}}
-    <section>
-      <p><em>id:</em> {{id}}</p>
-      <p><em>name:</em> <b>{{name}}</b></p>
-      <p><em>description:</em> {{description}}</p>
-      <p><b>members:</b></p>
-      {{#each members}}
-      <section>
-        <p><em>id:</em> {{id}}</p>
-        <p><em>name:</em> <b>{{name}}</b></p>
-        <p><em>gender:</em> {{gender}}</p>
-        <p><em>age:</em> {{age}}</p>
-      </section>
-      {{/each}}
-    </section>
-    {{/each}}
-    {{/if}}
-
-
-
-
-
-
-  </section>
-  {{/each}}
+  </div>
 </div>

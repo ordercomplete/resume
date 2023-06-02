@@ -5,147 +5,203 @@
 
 <div>
   {{#with person}}
+
+
+  <div class="card col-6"
+    style="background-image: linear-gradient( 92.7deg,  rgba(245,212,212,1) 8.5%, rgba(252,251,224,1) 90.2% );">
+    <div class="card-body">
+      <div>
+        <h3>{{name}}</h3>
+      </div>
+
+      <div>
+        <b>Age</b> - {{age}}, <b>gender</b> - {{gender}}
+      </div>
+
+      {{#with address}}
+      <div>
+        <em>Address:</em> {{street}}; {{city}}; {{state}}; {{zip}}; {{country}}
+      </div>
+    </div>
+  </div>
   <section>
-    <div>
-      <h3>{{name}}</h3>
-    </div>
-    <br>
-    <div>
-      <b>Age</b> - {{age}}, <b>gender</b> - {{gender}}
-    </div>
-    <br>
-    {{#with address}}
-    <div>
-      <em>Address:</em> {{street}}; {{city}}; {{state}}; {{zip}}; {{country}}
-    </div>
+
     {{/with}}
-    <br>
+
     {{#each education}}
-    <h4>Education</h4>
-    <div>
-      <em>degree:</em> {{degree}}<br>
-      <em>major:</em> {{major}}<br>
-      <em>university:</em> {{university}}<br>
-      <em>graduation year:</em> {{graduationYear}}<br>
+    <div class="card col-7 p-3"
+      style="background-image: linear-gradient( 92.7deg,  rgba(245,212,212,1) 8.5%, rgba(252,251,224,1) 90.2% );">
+      <div class="card-body">
+        <h4>Education</h4>
+        <div>
+          <li><em>degree:</em> {{degree}}</li>
+          <li><em>major:</em> {{major}}</li>
+          <li><em>university:</em> {{university}}</li>
+          <li><em>graduation year:</em> {{graduationYear}}</li>
+        </div>
+      </div>
     </div>
     {{/each }}
     {{#each workExperience}}
-    <h4>Work experience</h4>
-    <div>
-      <dl>
-        <dt><em>company:</em></dt>
-        <dd>{{company}}</dd><br>
-        <dt><em>title:</em></dt>
-        <dd>{{title}}</dd><br>
-        <dt><em>start date:</em></dt>
-        <dd>{{startDate}}</dd><br>
-        <dt><em>end date:</em></dt>
-        <dd>{{endDate}}</dd><br>
-        <dt><em>responsibilities:</em></dt><br>
-        <dd>{{responsibilities}}</dd><br>
-        <dt><em>year founded:</em></dt>
-        <dd>{{year_founded}}</dd><br>
-        <dt><em>industry:</em></dt>
-        <dd>{{industry}}</dd><br>
-        <dt><em><b>employees:</b></em></dt>
-        <dd>
-          {{#each employees}}
-          <dl>
-            <dt><em>name:</em></dt>
-            <dd>{{name}}</dd><br>
-            <dt><em>position:</em></dt>
-            <dd>{{position}}</dd><br>
-            <dt><em>department:</em></dt>
-            <dd>{{department}}</dd><br>
-            <dt><em><b>projects:</b></em></dt>
-            <dd>
+
+
+    <section>
+      <div class="card col-8 p-3"
+        style="background-image: linear-gradient( 92.7deg,  rgba(245,212,212,1) 8.5%, rgba(252,251,224,1) 90.2% );">
+        <div class="card-body">
+          <h4>Work experience</h4>
+          <li><i>company:</i>
+            {{company}}</li>
+          <li><i>title:</i>
+            {{title}}</li>
+          <li><i>start date:</i>
+            {{startDate}}</li>
+          <li><i>end date:</i>
+            {{endDate}}</li>
+          <li><i>responsibilities:</i>
+            {{responsibilities}}<br></li>
+          <li><i>year founded:</i>
+            {{year_founded}}</li>
+          <li><i>industry:</i>
+            {{industry}}</li>
+        </div>
+      </div>
+
+      <section>
+        <div class="card col-9 p-3"
+          style="background-image: linear-gradient( 92.7deg,  rgba(245,212,212,1) 8.5%, rgba(252,251,224,1) 90.2% );">
+          <div class="card-body">
+            <div class="mb-2"><i><b>employees:</b></i></div>
+            {{#each employees}}
+
+            <li><em>name:</em>
+              {{name}}</li>
+            <li><em>position:</em>
+              {{position}}</li>
+            <li><em>department:</em>
+              {{department}}</li>
+
+            <section>
+              <div class="mb-2"><em><b>projects:</b></em></div>
               {{#each projects}}
-              <dl>
-                <dt><em>name:</em></dt>
-                <dd>{{name}}</dd><br>
-                <dt><em>description:</em></dt>
-                <dd>{{description}}</dd><br>
-                <dt><em>status:</em></dt>
-                <dd>{{status}}</dd><br>
-                <dt><em><b>teams:</b></em></dt>
-                <dd>
-                  {{#each teams}}
-                  <dl>
-                    <dt><em>team name:</em></dt>
-                    <dd>{{team_name}}</dd><br>
-                    <dt><em><b>team leader:</b></em></dt>
-                    <dd>
-                      {{#with team_leader}}
-                      <dl>
-                        <dt><em>name:</em></dt>
-                        <dd>{{name}}</dd><br>
-                        <dt><em>title:</em></dt>
-                        <dd>{{title}}</dd><br>
-                        <dt><em>email:</em></dt>
-                        <dd>{{email}}</dd><br>
-                      </dl>
-                      {{/with}}
-                    </dd>
-                    <dt><em><b>team members:</b></em></dt>
-                    <dd>
-                      {{#each team_members}}
-                      <dl>
-                        <dt><em>name:</em></dt>
-                        <dd>{{name}}</dd><br>
-                        <dt><em>title:</em></dt>
-                        <dd>{{title}}</dd><br>
-                        <dt><em>email:</em></dt>
-                        <dd>{{email}}</dd><br>
-                        <dt><em>skills:</em></dt>
-                        <dd>{{#each skills}} <li>{{this}}</li> {{/each}}</dd><br>
-                        <dt><em><b>projects:</b></em></dt>
-                        <dd>
-                          {{#each projects}}
-                          <dl>
-                            <dt><em>name:</em></dt>
-                            <dd>{{name}}</dd><br>
-                            <dt><em>description:</em></dt>
-                            <dd>{{description}}</dd><br>
-                            <dt><em>technologies:</em></dt>
-                            <dd>
-                              {{#each technologies}}
-                              <li>{{this}}</li>
-                              {{/each}}
-                            </dd><br>
-                            <dt><em><b>team members:</b></em></dt>
-                            <dd>
-                              {{#each team_members}}
-                              <dl>
-                                <dt><em>name:</em></dt>
-                                <dd>{{name}}</dd>
-                              </dl>
-                              <dl>
-                                <dt><em>title:</em></dt>
-                                <dd>{{title}}</dd>
-                              </dl>
-                              {{/each}}
-                            </dd>
-                          </dl>
-                          {{/each}}
-                        </dd>
-                      </dl>
+
+              <li><em>name:</em>
+                {{name}}</li>
+              <li><em>description:</em>
+                {{description}}</li>
+              <li><em>status:</em>
+                {{status}}</li>
+
+              <section>
+                <div class="mb-2"><em><b>teams:</b></em></div>
+                {{#each teams}}
+                <div>
+                  <li><em>team name:</em>
+                    {{team_name}}</li>
+
+                  <section>
+                    <em class="mb-2"><b>team leader:</b></em>
+                    {{#with team_leader}}
+                    <li><em>name:</em>
+                      {{name}}</li>
+                    <li><em>title:</em>
+                      {{title}}</li>
+                    <li><em>email:</em>
+                      {{email}}</li>
+                  </section>
+                  {{/with}}
+                </div>
+
+              </section>
+            </section>
+          </div>
+        </div>
+        <section>
+          <div class="card col-10 p-3"
+            style="background-image: linear-gradient( 92.7deg,  rgba(245,212,212,1) 8.5%, rgba(252,251,224,1) 90.2% );">
+            <div class="card-body">
+              <section>
+                <div class="mb-2"><em><b>team members:</b></em></div>
+                {{#each team_members}}
+
+                <li><em>name:</em>
+                  {{name}}</li>
+                <li><em>title:</em>
+                  {{title}}</li>
+                <li><em>email:</em>
+                  {{email}}</li>
+                <section class="my-2 py-2">
+                  <div class="mb-2"><em><b>skills:</b></em></div>
+                  <div>{{#each skills}}
+                    <li>{{this}}</li> {{/each}}
+                  </div>
+                </section>
+
+
+
+
+
+                <section class="m-0 py-0">
+                  <section class="m-0 py-0">
+                    <div class="mb-2 mt-0"><em><b>projects:</b></em></div>
+                    {{#each projects}}
+                    <li><em>name:</em>
+                      {{name}}</li>
+                    <li><em>description:</em>
+                      {{description}}</li>
+                    <div class="my-2"><em><b>technologies:</b></em></div>
+                    <div>
+                      {{#each technologies}}
+                      <li>{{this}}</li>
                       {{/each}}
-                    </dd>
-                  </dl>
-                  {{/each}}
-                </dd>
-              </dl>
+                    </div>
+
+                    <section>
+                      <div class="mb-2"><em><b>team members:</b></em></div>
+                      <div>
+                        {{#each team_members}}
+                        <div>
+                          <li><em>name:</em>
+                            {{name}}</li>
+                        </div>
+                        <div>
+                          <li><em>title:</em>
+                            {{title}}</li>
+                        </div>
+                        {{/each}}
+                      </div>
+                    </section>
+                  </section>
+                </section>
+                {{/each}}
+              </section>
               {{/each}}
-            </dd>
-          </dl>
+            </div>
+          </div>
+
           {{/each}}
-        </dd>
-      </dl>
-    </div>
+        </section>
+
+        {{/each}}
+      </section>
+      {{/each}}
+    </section>
     {{/each}}
   </section>
   {{/with}}
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
 Адже наш layout/default.hbs має вже структуру HTML

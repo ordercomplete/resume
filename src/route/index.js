@@ -7,8 +7,8 @@ const router = express.Router()
 
 var header = {
   address: `132 Christiansen Radial Garlandfort, LA 03788-6152`,
-  position: `Junior Fullstack JS Developer`,
-  salary: `$600 per month`,
+  position: `Fullstack JS Developer`,
+  salary: `$2600 per month`,
   title: {
     text: `Resume`,
   },
@@ -42,7 +42,16 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+
+    layout: `index`,
+
+    page: {
+      title: {
+        text: `Resume | Main`,
+      },
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -453,7 +462,7 @@ router.get('/person', function (req, res) {
           endDate: '2016-12-31',
           responsibilities: [
             'Developed new features for Google Maps',
-            'Worked on improving search algorithms',
+            ' Worked on improving search algorithms',
           ],
           year_founded: 1990,
           industry: 'Technology',
@@ -864,7 +873,7 @@ router.get('/js', function (req, res) {
     layout: `basic`,
     page: {
       title: {
-        text: `Resume | Web`,
+        text: `Resume | JS`,
       },
     },
 
@@ -1322,7 +1331,10 @@ router.get('/bootstrap', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('bootstrap', {})
+  res.render('bootstrap', {
+
+    layout: `bootstrap`
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 

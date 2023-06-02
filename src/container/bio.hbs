@@ -1,8 +1,10 @@
-<div>
+<div class="row g-4">
   {{#with main}}
-  <section>
-    <div>
-      <h3>Name: {{name}}</h3>
+
+  <div class="card"
+    style="background-image: radial-gradient( circle 513px at 52.1% 52.6%,  rgba(240,241,163,1) 0%, rgba(236,135,135,1) 90% );">
+    <div class="card-body">
+      <h3>{{name}}</h3>
       <div>
         <p>Birth date: {{birthdate}}</p>
         <p>Death place: {{deathplace}}</p>
@@ -16,51 +18,65 @@
         </ul>
         </p>
       </div>
-      <hr>
-      <hr>
+    </div>
+  </div>
+
+
+
+  <div class="card"
+    style="background-image: radial-gradient( circle 513px at 52.1% 52.6%,  rgba(240,241,163,1) 0%, rgba(236,135,135,1) 90% );">
+    <div class="card-body text-end">
       <h4>Education:</h4>
       <div>
-        <p>{{#each education}}
+        {{#each education}}
         <p>Degree: {{degree}}</p>
         <p>Field: {{field}}</p>
         <p>Institution: {{institution}}</p>
         <p>Year: {{year}}</p>
         {{/each}}
-        </p>
       </div>
-      <hr>
-      <hr>
+    </div>
+  </div>
 
-
+  <div class="card"
+    style="background-image: radial-gradient( circle 513px at 52.1% 52.6%,  rgba(240,241,163,1) 0%, rgba(236,135,135,1) 90% );">
+    <div class="card-body">
       <div>
         <h4>Notable publications:</h4>
-        <p>{{#each notable_publications}}
-        <div>
+        {{#each notable_publications}}
+        <div class="{{#if @last}} text-end {{/if}}">
           <p>Title: {{title}}</p>
           <p>Year: {{year}}</p>
           <p>Publisher: {{publisher}}</p>
-          <hr>
+          {{#if @last}} {{else}}
+          <hr> {{/if}}
         </div>
         {{/each}}
-        <hr>
-        </p>
       </div>
+    </div>
+  </div>
 
-
+  <div class="card"
+    style="background-image: radial-gradient( circle 513px at 52.1% 52.6%,  rgba(240,241,163,1) 0%, rgba(236,135,135,1) 90% );">
+    <div class="card-body">
       <div>
         <h4>Partners:</h4>
-        <p>{{#each partners}}
-        <div>
+        {{#each partners}}
+        <div class="{{#if @last}} text-end {{/if}}">
           <p>Name: {{name}}</p>
           <p>Relationship: {{relationship}}</p>
           <p>Years: {{years}}</p>
-          <hr>
+          {{#if @last}} {{else}}
+          <hr> {{/if}}
         </div>
         {{/each}}
-        <hr>
-        </p>
       </div>
+    </div>
+  </div>
 
+  <div class="card"
+    style="background-image: radial-gradient( circle 513px at 52.1% 52.6%,  rgba(240,241,163,1) 0%, rgba(236,135,135,1) 90% );">
+    <div class="card-body">
       <div>
         <h4>Awards:</h4>
         <p>{{#each awards}}
@@ -68,56 +84,64 @@
           <p>Title: {{title}}</p>
           <p>Years: {{year}}</p>
           <p>Description: {{description}}</p>
-          <hr>
         </div>
         {{/each}}
-        <hr>
         </p>
       </div>
+    </div>
+  </div>
 
-      <div>
+  <div class="card"
+    style="background-image: radial-gradient( circle 513px at 52.1% 52.6%,  rgba(240,241,163,1) 0%, rgba(236,135,135,1) 90% );">
+    <div class="row px-3">
+      <div class="card-body col-4">
         <h4>Influences:</h4>
         {{#each influences}}
         <li>{{this}}</li><br>
         {{/each}}
-        <hr>
       </div>
 
-      <div>
+
+      <div class="card-body col-4">
         <h4>Influenced:</h4>
         {{#each influenced}}
         <li>{{this}}</li><br>
         {{/each}}
-        <hr>
       </div>
 
-      <div>
+      <div class="card-body col-4">
         <h4>Quotes:</h4>
         {{#each quotes}}
         <li>{{this}}</li><br>
         {{/each}}
       </div>
+    </div>
+  </div>
 
-      <hr>
-      <hr>
 
+
+  <div class="card"
+    style="background-image: radial-gradient( circle 513px at 52.1% 52.6%,  rgba(240,241,163,1) 0%, rgba(236,135,135,1) 90% );">
+    <div class="card-body">
       <div>
         <h4>Major discoveries:</h4>
-        <p>{{#each major_discoveries}}
+        {{#each major_discoveries}}
         <div>
           <p>Title: {{title}}</p>
           <p>Years: {{year}}</p>
           <p>Description: {{description}}</p>
-          <hr>
         </div>
         {{/each}}
-        <hr>
-        </p>
       </div>
+    </div>
+  </div>
 
+  <div class="card"
+    style="background-image: radial-gradient( circle 513px at 52.1% 52.6%,  rgba(240,241,163,1) 0%, rgba(236,135,135,1) 90% );">
+    <div class="card-body text-center">
       <div>
         <h4>Contributions:</h4>
-        <p>{{#with contributions}}
+        {{#with contributions}}
         <div>
           <p>Title: {{title}}</p>
           <p>Years: {{year}}</p>
@@ -125,9 +149,9 @@
           <p>Field: {{field}}</p>
         </div>
         {{/with}}
-        </p>
       </div>
     </div>
-  </section>
+  </div>
+
   {{/with}}
 </div>

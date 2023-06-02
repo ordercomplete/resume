@@ -2,38 +2,64 @@
 Це код container файлу для summary сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 }}
+<div class="card"
+  style="background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );">
 
-<div>
-  {{#with main}}
+  <div class="card-header">
+    <div class="card my-2">
+      <div class="card-body"
+        style="background-image: radial-gradient( circle 993px at 0.5% 50.5%,  rgba(137,171,245,0.37) 0%, rgba(245,247,252,1) 100.2% );">
+        {{>header-bio}}
+      </div>
+    </div>
 
-  {{#with summary}}
-  <section>
-    <div>
-      {{> title data=title big=true}}
-    </div>
-    <div>
-      <p>
-        {{text}}
-      </p>
-    </div>
-  </section>
-  {{/with}}
 
-  {{#with experience}}
-  <section>
-    <div>
-      {{> title data=title big=false}}
-    </div>
-    <div>
-      <p>
-        {{text}}
-      </p>
-    </div>
-  </section>
-  {{/with}}
 
-  {{/with}}
+
+  </div>
+
+
+
+  <div class="card-body">
+    {{#with main}}
+    <div class="card">
+      <div class="card-body">
+        {{#with summary}}
+        <section>
+          <div>
+            {{> title data=title big=true}}
+          </div>
+          <div>
+            <p>
+              {{text}}
+            </p>
+          </div>
+        </section>
+        {{/with}}
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body text-end">
+        {{#with experience}}
+        <section>
+          <div>
+            {{> title data=title big=false}}
+          </div>
+          <div>
+            <p>
+              {{text}}
+            </p>
+          </div>
+        </section>
+        {{/with}}
+      </div>
+    </div>
+
+    {{/with}}
+  </div>
 </div>
+
 
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
