@@ -1,0 +1,104 @@
+{{#with navigation}}
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body p-0">
+        <div class="nav">
+          {{#each links}}
+          <div class="nav-item ">
+            <a href="{{href}}" class="nav-link {{#unless href}} disabled {{/unless}}">{{text}}</a>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/with}}
+
+{{#with header}}
+<div>
+  <h3 class="mt-5 mb-3">{{title}}</h3>
+  <button href="{{button.link}}" class="btn btn-outline-secondary">{{button.text}}</button>
+</div>
+{{/with}}
+
+<div class="mt-5 mb-5">
+  <hr>
+</div>
+
+{{#each goodsBlock}}
+{{> cartGoodsItem}}
+{{/each}}
+
+<div class="mt-5 mb-5">
+  <hr>
+</div>
+
+<div>
+  {{#with total}}
+  <h6>{{title}}</h6>
+  <h4>{{amount}}</h4>
+  <p>{{delivery}}</p>
+  {{#each buttons}}
+  <button href="{{link}}"
+    class="btn mt-1 mb-3{{#if isSuccess}} btn-success{{/if}} {{#if isOutline}} btn-outline-success{{/if}}">{{text}}</button><br>
+
+  {{/each}}
+  {{/with}}
+
+
+</div>
+
+<div class="mt-5 mb-5">
+  <hr>
+</div>
+
+<div class="row gx-2 gy-4">
+  {{#with goodsOtherBlock}}
+  <h2 class="text-center">{{title}}</h2>
+  {{#each cards}}
+  {{>cartGoodsOther}}
+  {{/each}}
+  {{/with}}
+</div>
+
+<div class="mt-5 mb-5">
+  <hr>
+</div>
+
+{{#with subscribe}}
+<div class="card">
+  <div class="card-body text-bg-dark p-1">
+    <h2 class="m-1 mb-2">{{header}}</h2>
+    <p class="ms-1 mt-3 mb-3">{{description}}</p>
+    {{#each buttons}}
+    <a href="{{link}}" class="btn btn-primary btn-sm m-1">{{text}}</a><br>
+    {{/each}}
+  </div>
+</div>
+{{/with}}
+
+<div class="mt-5 mb-5">
+  <hr>
+</div>
+
+<div class="row g-5 ms-0">
+  <table>
+    <tr>
+      {{#each footer}}
+      <td>
+        <button class="btn m-0 p-0">
+          <div>
+            {{#each this}}
+            <div class="nav">
+              <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">{{this.text}}</a>
+            </div>
+            {{/each}}
+          </div>
+        </button>
+      </td>
+      {{/each}}
+    </tr>
+  </table>
+</div>

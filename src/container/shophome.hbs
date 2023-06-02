@@ -124,48 +124,24 @@
   <hr>
   <br>
 
-  <div class="row g-5">
-    {{#each footer}}
-    <div class="nav col-2">
-      <div>
-        {{#each this}}
-        <div>
-          <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">{{this.text}}</a>
-        </div>
+  <div class="row g-5 ms-0">
+    <table>
+      <tr>
+        {{#each footer}}
+        <td>
+          <button class="btn m-0 p-0">
+            <div>
+              {{#each this}}
+              <div class="nav">
+                <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">{{this.text}}</a>
+              </div>
+              {{/each}}
+            </div>
+          </button>
+        </td>
         {{/each}}
-      </div>
-    </div>
-    {{/each}}
+      </tr>
+    </table>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
