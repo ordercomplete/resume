@@ -33,6 +33,366 @@ var footer = {
     },
   },
 }
+
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/template-1', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('template-1', {
+
+    layout: `template-1`,
+    page: {
+      title: 'Example Page',
+    },
+    header: [
+      {
+        text: 'Features',
+        url: 'https://example.com/home',
+      },
+      {
+        text: 'Enterprise',
+        url: 'https://example.com/about',
+      },
+      {
+        text: 'Support',
+        url: 'https://example.com/services',
+      },
+    ],
+    hero: {
+      title: 'Pricing',
+      text: "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.",
+    },
+    plans: [
+      {
+        name: 'Free',
+        price: 0,
+        features: [
+          '10 users included',
+          '2 GB of storage',
+          'Email support',
+          'Help center access',
+        ],
+        button: 'Sign up for free',
+      },
+      {
+        name: 'Pro',
+        price: 15,
+        features: [
+          '20 users included',
+          '4 GB of storage',
+          'Priority email support',
+          'Help center access',
+        ],
+        button: 'Get started',
+      },
+      {
+        name: 'Enterprise',
+        price: 30,
+        features: [
+          '30 users included',
+          '15 GB of storage',
+          'Phone and email support',
+          'Help center access',
+        ],
+        button: 'Contact us',
+      },
+    ],
+    footer: [
+      {
+        title: 'Features',
+        links: [
+          {
+            text: 'Cool stuff',
+            url: 'https://example.com/cool-stuff',
+          },
+          {
+            text: 'Random feature',
+            url: 'https://example.com/random-feature',
+          },
+          {
+            text: 'Team feature',
+            url: 'https://example.com/team-feature',
+          },
+          {
+            text: 'Stuff for developers',
+            url: 'https://example.com/stuff-for-developers',
+          },
+        ],
+      },
+      {
+        title: 'Resources',
+        links: [
+          {
+            text: 'Resource name',
+            url: 'https://example.com/resource-name',
+          },
+          {
+            text: 'Another resource',
+            url: 'https://example.com/another-resource',
+          },
+          {
+            text: 'Final resource',
+            url: 'https://example.com/final-resource',
+          },
+        ],
+      },
+      {
+        title: 'About',
+        links: [
+          {
+            text: 'Team',
+            url: 'https://example.com/team',
+          },
+          {
+            text: 'Locations',
+            url: 'https://example.com/locations',
+          },
+          {
+            text: 'Privacy',
+            url: 'https://example.com/privacy',
+          },
+          {
+            text: 'Terms',
+            url: 'https://example.com/terms',
+          },
+        ],
+      },
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/css-help-1', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('css-help-1', {
+
+    layout: `help`,
+
+    page: {
+      title: {
+        text: `Help - 1`,
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/css-help-2', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('css-help-2', {
+
+    layout: `help`,
+
+    page: {
+      title: {
+        text: `Help - 2`,
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/css-help-3', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('css-help-3', {
+
+    layout: `help`,
+
+    page: {
+      title: {
+        text: `Help - 3`,
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/css-help-4', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('css-help-4', {
+
+    layout: `help`,
+
+    page: {
+      title: {
+        text: `Help - 4`,
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/css-help-5', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('css-help-5', {
+
+    layout: `help`,
+
+    page: {
+      title: {
+        text: `Help - 5`,
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/css-help-6', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('css-help-6', {
+
+    layout: `help`,
+
+    page: {
+      title: {
+        text: `Help - 6`,
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/css-help-7', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('css-help-7', {
+
+    layout: `help`,
+
+    page: {
+      title: {
+        text: `Help - 7`,
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/css-help-8', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('css-help-8', {
+
+    layout: `help`,
+
+    page: {
+      title: {
+        text: `Help - 8`,
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/css-help-9', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('css-help-9', {
+
+    layout: `help`,
+
+    page: {
+      title: {
+        text: `Рамки та тіні`,
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/css-help-10', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('css-help-10', {
+
+    layout: `help`,
+
+    page: {
+      title: {
+        text: `Робота з контентом`,
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+
 // ================================================================
 
 // router.get Створює нам один ентпоїнт

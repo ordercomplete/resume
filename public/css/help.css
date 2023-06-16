@@ -1,0 +1,114 @@
+main {
+  margin: 0 32 32 32;
+}
+
+nav {
+  margin: 0;
+}
+
+.helpmargintop {
+  padding-top: 100px;
+}
+
+.mainmenu {
+  height: auto;
+  position: fixed;
+  width: 820px;
+  z-index: 1;
+}
+
+.nav-margin {
+  margin: 10px;
+}
+
+.navhelpgradient {
+  background: #e0eafc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h5 {
+  text-align: center;
+  color: rgb(125, 39, 175);
+}
+
+table.rounded {
+  width: 700;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin: 20px;
+}
+
+table.rounded td {
+  word-break: normal;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+/* table.rounded td pre {
+  margin: auto 5;
+} */
+
+.alerts-container {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border-alert {
+  padding: 15px;
+  border: solid 1px #9eeaf9;
+  border-radius: 0.25rem;
+  background: #cff4fc;
+  box-shadow: 3px 3px 3px #777676;
+}
+
+.a-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: max-content;
+  height: max-content;
+}
+
+.a-secondary {
+  text-shadow: 3px 3px 3px #777676;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+}
+
+.col-7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

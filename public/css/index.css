@@ -1,3 +1,8 @@
+/* :root {
+  background: red;
+} Root селектор — це селектор, який вибирає абстрактний
+кореневий тег, в якому знаходиться вже інший HTML код */
+
 html {
   max-width: 820px;
   width: 100%;
@@ -20,13 +25,37 @@ body {
   margin: 32px;
 }
 
-main,
-header,
-footer,
+/* .mainmenu {
+  position: fixed;
+  width: 820px;
+} */
+
+main {
+  margin: 0 32 32 32;
+}
 nav {
+  margin: 0 32 32 32;
+}
+
+header,
+footer {
   margin: 32px;
 }
 
 section {
   padding: 16px;
+}
+
+.navgradient {
+  background: #e0eafc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

@@ -1,0 +1,14 @@
+this["MyApp"]["templates"]["index"] = Handlebars.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+          return parent[propertyName];
+        }
+        return undefined
+    };
+
+  return "<html>\r\n\r\n<body>\r\n\r\n  <head>\r\n    <title>\r\n      "
+    + container.escapeExpression(container.lambda(((stack1 = ((stack1 = (depth0 != null ? lookupProperty(depth0,"page") : depth0)) != null ? lookupProperty(stack1,"title") : stack1)) != null ? lookupProperty(stack1,"text") : stack1), depth0))
+    + "\r\n    </title>\r\n    <meta charset='utf-8' />\r\n\r\n    <link href='css/normalize.css' rel='stylesheet' />\r\n\r\n    <link href='css/index.css' rel='stylesheet' />\r\n\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\r\n      integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\r\n\r\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css\">\r\n\r\n    <script src=\"https://kit.fontawesome.com/0c753befba.js\" crossorigin=\"anonymous\"></script>\r\n  </head>\r\n\r\n  <div class=\"card m-4 p-2\">\r\n    <div class=\"card\"\r\n      style=\"background: rgb(7,49,71);\r\nbackground: linear-gradient(270deg, rgba(7,49,71,1) 0%, rgba(73,102,121,1) 14%, rgba(117,138,154,1) 31%, rgba(209,211,227,1) 50%, rgba(153,166,182,1) 66%, rgba(117,138,154,1) 81%, rgba(7,49,71,1) 100%); color: rgb(255, 255, 255);\">\r\n      <div class=\"row\">\r\n        <div class=\"col-6\">\r\n\r\n          <div class=\"ms-3 mt-2\">\r\n            <p>Andrii Khursenko</p>\r\n          </div>\r\n\r\n        </div>\r\n        <div class=\"col-6\">\r\n\r\n          <div class=\"me-3 mt-2\">\r\n            <P class=\"text-end\">Resume project</P>\r\n          </div>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n\r\n\r\n  <main>"
+    + ((stack1 = ((helper = (helper = lookupProperty(helpers,"body") || (depth0 != null ? lookupProperty(depth0,"body") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"body","hash":{},"data":data,"loc":{"start":{"line":53,"column":8},"end":{"line":53,"column":18}}}) : helper))) != null ? stack1 : "")
+    + "</main>\r\n\r\n\r\n\r\n  <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js\"></script>\r\n\r\n</body>\r\n\r\n</html>";
+},"useData":true});

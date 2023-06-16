@@ -1,0 +1,722 @@
+<h3>Робота з обрізанням
+  та перенесенням
+  контенту</h3>
+<details>
+  <summary>
+    <h4>
+      Видимість
+    </h4>
+    <p>
+      visibility — це CSS властивість, яка допомагає приховати
+      певний елемент з екрана браузера та не ламає верстку
+    </p>
+  </summary>
+
+
+  <div class="alerts-container">
+
+    <div class="col-6">
+      <div class="a-primary" style="color: red; padding-bottom: 0;">
+        <div class="border-alert">
+          div {<br>
+          visibility: hidden;<br>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="a-secondary">
+        <div class="border-alert">
+          <div>visibility</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <table class="rounded">
+
+    <tr class="text-center">
+      <th>Значення</th>
+      <th>Опис</th>
+    </tr>
+
+
+    <tr>
+      <td>visibility</td>
+      <td>Показати елемент</td>
+    </tr>
+    <tr>
+      <td>hidden</td>
+      <td>Приховати елемент</td>
+    </tr>
+    <tr>
+      <td>collapse</td>
+      <td>Працює як hidden,
+        але покращує відображення в певних випадках</td>
+    </tr>
+
+
+
+  </table>
+
+  <h5>visibility: collapse</h5>
+  <ul>
+    <li>Для &lt;table&gt; вона дозволяє приховувати рядки або стовпці таблиці,
+      видаляючи їх простір, але зберігаючи розміри інших елементів таблиць</li>
+    <li>Рубінові анотації (&lt;ruby&gt;) приховані, а простір, який вони займали,
+      видалено</li>
+    <li>Згорнуті елементи при роботі з display: flex</li>
+  </ul>
+
+  {{!-- &lt;ruby&gt; --}}
+
+</details>
+
+<details>
+  <summary>
+    <h4>
+      Обрізання блоку
+    </h4>
+    <p>
+      overflow — це CSS властивість, яка відповідає
+      за те, як саме потрібно показати контент блоку,
+      якщо він не влазить
+    </p>
+    <p>
+    </p>
+  </summary>
+
+  <div class="alerts-container">
+
+    <div class="col-6">
+      <div class="a-primary" style="color: red">
+        <div class="border-alert">
+          h1 {<br>
+          overflow: hidden;<br>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="a-secondary">
+        <div class="border-alert">
+          <h5>overflow</h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <table class="rounded">
+
+    <tr class="text-center">
+      <th>Значення</th>
+      <th>Опис</th>
+    </tr>
+
+
+    <tr>
+      <td>overflow-x</td>
+      <td>Якщо треба задати для горизонтальної сторони</td>
+    </tr>
+    <tr>
+      <td>overflow-y</td>
+      <td>Якщо треба задати для вертикальної сторони</td>
+    </tr>
+
+  </table>
+
+  <table class="rounded">
+
+    <tr class="text-center">
+      <th>Значення</th>
+      <th>Опис</th>
+    </tr>
+
+
+    <tr>
+      <td>auto</td>
+      <td>Браузер автоматично визначає, чи повинен додавати
+        смужку прокрутки відповідно до розміру вмісту</td>
+    </tr>
+    <tr>
+      <td>visible</td>
+      <td>Елемент виводиться з області блоку, що може призвести до
+        перекриття інших елементів на сторінці</td>
+    </tr>
+    <tr>
+      <td>hidden</td>
+      <td>Вміст, що виходить за межі блоку, буде приховано</td>
+    </tr>
+    <tr>
+      <td>clip</td>
+      <td>Працює як hidden, але повністю забороняє прокрутку блоку
+        через просунуті технології та JavaScript</td>
+    </tr>
+    <tr>
+      <td>scroll</td>
+      <td>Додає смужки прокрутки, щоб користувач міг
+        прокручувати вміст блоку, але смужки займають місце
+        збоку справа</td>
+    </tr>
+    <tr>
+      <td>overlay</td>
+      <td>Працює як auto, але смужки прокручування намальовані
+        поверх контенту, а не займають місце збоку справа</td>
+    </tr>
+
+  </table>
+
+</details>
+
+<details>
+  <summary>
+    <h4>
+      Обрізання тексту
+    </h4>
+    <p>
+      text-overflow — це CSS властивість, яка допомагає додати
+      три крапки (“...”) в кінці тексту, якщо елемент не влазить
+    </p>
+
+  </summary>
+
+  <div class="alerts-container">
+
+    <div class="col-6">
+      <div class="a-primary" style="color: red">
+        <div class="border-alert">
+          span {<br>
+          text-overflow: ellipsis;<br>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="a-secondary">
+        <div class="border-alert">
+          <h5>text-overflow</h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <table class="rounded">
+
+    <tr class="text-center">
+      <th>Значення</th>
+      <th>Опис</th>
+    </tr>
+
+
+    <tr>
+      <td>clip</td>
+      <td>Текст обрізається, коли він виходить за межі блоку,
+        значення за замовчуванням</td>
+    </tr>
+    <tr>
+      <td>ellipsis</td>
+      <td>Текст обрізається, коли він виходить за межі блоку,
+        але в кінці додається три крапки (“...”)</td>
+    </tr>
+
+  </table>
+
+</details>
+
+<details>
+  <summary>
+    <h4>
+      Пропуск білих символів
+    </h4>
+    <p>
+      white-space — це CSS властивість, яка обробляє пробіли
+      між словами та перенесення рядків усередині елемента.
+    </p>
+
+  </summary>
+
+  <div class="alerts-container">
+
+    <div class="col-6">
+      <div class="a-primary" style="color: red">
+        <div class="border-alert">
+          span {<br>
+          white-space: pre-wrap;<br>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="a-secondary">
+        <div class="border-alert">
+          <h5>white-space</h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <table class="rounded">
+
+    <tr class="text-center">
+      <th>Значення</th>
+      <th>Опис</th>
+    </tr>
+
+
+    <tr>
+      <td>normal</td>
+      <td>Між словами вставляється лише по одному пропуску,
+        додаткові пропуски відкидаються. Текст переноситься
+        лише у разі потреби.</td>
+    </tr>
+    <tr>
+      <td>nowrap</td>
+      <td>Забороняє перенесення рядків, за винятком
+        застосування <br>.</td>
+    </tr>
+    <tr>
+      <td>pre</td>
+      <td>Відображає пробіли та перенесення так, як є в коді</td>
+    </tr>
+    <tr>
+      <td>pre-wrap</td>
+      <td>Відображає пробіли та перенесення так, як є в коді,
+        але в потрібних місцях переноситься текст</td>
+    </tr>
+    <tr>
+      <td>pre-line</td>
+      <td>Видаляє всі додаткові пробіли в коді,
+        відображає символи перенесення,
+        в потрібних місцях переноситься текст</td>
+    </tr>
+    <tr>
+      <td>break-spaces</td>
+      <td>Працює як pre-wrap,
+        але переносить пробіли на новий рядок</td>
+    </tr>
+
+
+  </table>
+</details>
+
+<details>
+  <summary>
+    <h4>
+      Перенесення тексту
+    </h4>
+    <p>
+      overflow-wrap — це CSS властивість, яка відповідає як саме
+      потрібно перенести текст, якщо все останнє слово не може
+      розділитись на частину та перейти на новий рядок
+    </p>
+  </summary>
+  <div class="row">
+    <div class="alerts-container">
+      <div class="col-6">
+        <div class="a-primary" style="color: red">
+          <div class="border-alert">
+            span {<br>
+            overflow-wrap: break-word;<br>
+            }
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="a-secondary">
+          <div class="border-alert">
+            <h5>overflow-wrap</h5>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <table class="rounded">
+
+    <tr class="text-center">
+      <th>Значення</th>
+      <th>Опис</th>
+    </tr>
+
+    <tr>
+      <td>normal</td>
+      <td>Значення за замовчуванням.</td>
+    </tr>
+    <tr>
+      <td>anywhere</td>
+      <td>Якщо слово не поміщається на поточному рядку, то
+        розрив слова буде відбуватись в будь-яких місцях</td>
+    </tr>
+    <tr>
+      <td>break-word</td>
+      <td>Якщо слово не поміщається на поточному рядку, то
+        розрив слова буде відбуватись в найкращому місці</td>
+    </tr>
+
+
+  </table>
+
+</details>
+
+<details>
+  <summary>
+    <h4>
+      Перенесення слова
+    </h4>
+    <p>
+      word-break — це CSS властивість, яка відповідає за
+      можливість перенесення слів на новий рядок
+    </p>
+  </summary>
+
+
+  <div class="row">
+
+    <div class="alerts-container">
+
+      <div class="col-6">
+        <div class="a-primary" style="color: red">
+          <div class="border-alert">
+            span {<br>
+            word-break: break-all;<br>
+            }<br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="a-secondary">
+          <div class="border-alert">
+            <h5>word-break</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <table class="rounded">
+
+    <tr class="text-center">
+      <th>Значення</th>
+      <th>Опис</th>
+    </tr>
+
+
+    <tr>
+      <td>normal</td>
+      <td>Значення за замовчуванням.</td>
+    </tr>
+    <tr>
+      <td>break-all</td>
+      <td>Перенесення слів не застосовується,
+        але слова розбиваються в потрібному місці</td>
+    </tr>
+    <tr>
+      <td>keep-all</td>
+      <td>Забороняє розрив між словами</td>
+    </tr>
+    <tr>
+      <td>break-word</td>
+      <td>Слова, які не поміщаються, будуть розбиті
+        на дві частини, щоб вони вмістилися</td>
+    </tr>
+
+  </table>
+
+</details>
+
+<details>
+  <summary>
+    <h4>
+      Перенесення слова через символ
+    </h4>
+    <p>
+      hyphens — це CSS властивість, яка дозволяє
+      створювати м’які переноси слів на новий рядок
+    </p>
+
+  </summary>
+
+  <div>
+
+    <div class="row">
+
+      <div class="alerts-container">
+
+        <div class="col-6">
+          <div class="a-primary" style="color: red">
+            <div class="border-alert">
+              span {<br>
+              hyphens: manual;<br>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class=" a-secondary">
+            <div class="border-alert m-3">
+              <h5>hyphens</h5>
+            </div>
+            <div class="border-alert m-3">
+              <h5> &amp;shy; </h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    {{!-- &amp;shy; --}}
+
+    <table class="rounded">
+
+      <tr class="text-center">
+        <th>Значення</th>
+        <th>Опис</th>
+      </tr>
+
+      <tr>
+        <td>none</td>
+        <td>Слова не переносяться</td>
+      </tr>
+      <tr>
+        <td>auto</td>
+        <td>Браузер сам вирішує як треба переносити</td>
+      </tr>
+      <tr>
+        <td>manual</td>
+        <td>Слова переносяться через символ (&amp;shy;)</td>
+      </tr>
+
+    </table>
+
+
+  </div>
+</details>
+
+<details>
+  <summary>
+    <h4>
+      Символ перенесення слів
+    </h4>
+    <p>
+      hyphenate-character — це CSS властивість, яка дозволяє
+      встановлювати символ, який буде використовуватися для
+      перенесення слів у тексті, якщо такий текст містить дефіси
+      для перенесення слів.
+    </p>
+
+  </summary>
+
+  <div>
+
+    <div class="row">
+
+      <div class="alerts-container">
+
+        <div class="col-6">
+          <div class="a-primary" style="color: red">
+            <div class="border-alert">
+              .example {<br>
+              hyphenate-character: "———";<br>
+              }<br>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="a-secondary">
+            <div class="border-alert">
+              <h5>hyphenate-character</h5>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <table class="rounded">
+
+      <tr class="text-center">
+        <th>Значення</th>
+        <th>Опис</th>
+      </tr>
+
+      <tr>
+        <td>auto</td>
+        <td>Браузер використовує дефіс для перенесення слів.
+          Значення за замовчуванням</td>
+      </tr>
+
+      <tr>
+        <td>&lt;string&gt;</td>
+        <td>Задається конкретний символ для перенесення слів
+          у вигляді рядка</td>
+      </tr>
+
+    </table>
+
+  </div>
+</details>
+
+<details>
+  <summary>
+    <h4>
+      Інтервал слів
+    </h4>
+    <p>
+      word-spacing — це CSS властивість,
+      яка визначає інтервали між словами в тексті
+    </p>
+
+  </summary>
+
+  <div>
+
+    <div class="row">
+
+      <div class="alerts-container">
+
+        <div class="col-6">
+          <div class="a-primary" style="color: red">
+            <div class="border-alert">
+              h1 {<br>
+              word-spacing: 4px<br>
+              }<br>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="a-secondary">
+            <div class="border-alert">
+              <h5>word-spacing</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <table class="rounded">
+
+    <tr class="text-center">
+      <th>Значення</th>
+      <th>Опис</th>
+    </tr>
+
+    <tr>
+      <td>normal</td>
+      <td>Значення за замовчуванням</td>
+    </tr>
+
+    <tr>
+      <td>Довжина</td>
+      <td>Приймає значення в будь-якій одиниці виміру</td>
+    </tr>
+
+  </table>
+
+
+
+</details>
+
+<details>
+  <summary>
+    <h4>
+      Зміна розмірів
+    </h4>
+    <p>
+      resize — це CSS властивість, яка використовується для
+      встановлення можливості зміни розмірів елемента
+      користувачем за допомогою миші
+    </p>
+
+  </summary>
+
+  <div>
+
+    <div class="row">
+
+      <div class="alerts-container">
+
+        <div class="col-6">
+          <div class="a-primary" style="color: red">
+            <div class="border-alert">
+              .example {<br>
+              resize: both;<br>
+              }<br>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="a-secondary">
+            <div class="border-alert">
+              <h5>resize</h5>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <table class="rounded">
+
+      <tr class="text-center">
+        <th>Значення</th>
+        <th>Опис</th>
+      </tr>
+
+      <tr>
+        <td>none</td>
+        <td>Браузер не надає змінити розмір елемента користувачем.
+          Значення за замовчуванням.</td>
+      </tr>
+
+      <tr>
+        <td>both</td>
+        <td>Дозволяє змінювати розміри елемента користувачем як по
+          горизонталі, так і по вертикалі.</td>
+      </tr>
+      <tr>
+        <td>horizontal</td>
+        <td>Дозволяє змінювати розміри елемента користувачем лише
+          по горизонталі.
+        </td>
+      </tr>
+      <tr>
+        <td>vertical</td>
+        <td>Дозволяє змінювати розміри елемента користувачем лише
+          по вертикалі.</td>
+      </tr>
+
+    </table>
+
+
+  </div>
+</details>
